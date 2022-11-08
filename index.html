@@ -14,12 +14,13 @@
 </head>
 
 <body>
-      <div class="container m-auto">
+      <div class="container">
             <div id="app">
                   <h1>La mia lista di mail</h1>
-                  <ul class="list-group">
-                        <li class="list-group-item" v-for="mail in mailArray" v-show="mailArray.length === 10">{{mail}}</li>
+                  <ul class="list-group" v-if="mailArray.length === 10">
+                        <li class="list-group-item" v-for="mail in mailArray" >{{mail}}</li>
                   </ul>
+                  <p v-else>{{loadingMessage}}</p>
             </div>
       </div>
       <!-- Bootstrap JavaScript Libraries -->

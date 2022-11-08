@@ -9,6 +9,7 @@ createApp ({
       data(){
             return {
                   urlMail: 'https://flynn.boolean.careers/exercises/api/random/mail',
+                  loadingMessage:'il contenuto sta caricando..',
                   mailArray: []
             }
       },
